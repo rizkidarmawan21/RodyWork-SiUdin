@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        robotoFlex: ['Roboto Flex', 'sans-serif'],
+                    },
+                    spacing: {
+                        13: '3.25rem',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang': 'goyang 1s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%,100%': {
+                                transform: 'rotate(-3deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(3deg)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>SiUdin</title>
+</head>
+
+<body class="bg-cover" style="background-image: url('assets/bg.jpg');">
+    <header class="">
+        <div class="logo">
+            <img class="mx-auto mt-10 w-32 md:w-40 lg:w-60" src="assets/logo.png" alt="">
+        </div>
+        <div class="content-header mt-3">
+            <h3 class="text-center italic text-[20px] font-robotoFlex text-[#1C1B1F] font-light">Write your hopes and
+                suggestions</h3>
+            <p class="text-center italic text-sm font-robotoFlex text-[#1C1B1F] font-extrabold">for our beloved
+                campus<span class="ml-1 bg-[#003CD7]/50 w-[100px] h-5 relative top-1 inline-block rotate-3"><span
+                        class="absolute right-2 -rotate-3 text-white">as an Anonim</span></span></p>
+        </div>
+    </header>
+    <main>
+        <div class="container lg:max-w-[50%] max-w-lg mx-auto mt-5 p-4 mb-10">
+            <form action="" class="lg:flex sm:block block">
+                <textarea type="text" placeholder="Tulis pesan anda" rows="1" class="
+                        px-3
+                        py-2
+                    border
+                    shadow
+                    rounded
+                    w-full
+                    block
+                    text-sm
+                    text-slate-600
+                    focus:outline-none
+                    focus:ring-1
+                    focus:ring-sky-500
+                    focus:border-sky-500
+                    "></textarea>
+                <!-- <button class="ml-3 mx-auto block bg-sky-500 px-5 py-2 justify-end rounded text-white font-semibold hover:bg-sky-600 active:bg-sky-700 ">Kirim</button>
+                 -->
+                <button
+                    class="bg-[#70FF75] px-5 py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-white font-semibold font-inter block mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
+                    <img src="assets/SendIcon.svg" width="20px" alt="">
+                </button>
+            </form>
+        </div>
+
+        <div class="text-center">
+            <h1 class="text-robotoFlex font-bold text-2xl italic text-slate-800">Curahan Maidomu</h1>
+        </div>
+
+        <div class=" rounded-md  mt-5 mb-10 max-w-3xl p-5 h-[50em] mx-auto overflow-y-scroll overflow-visible">
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg max-w-3xl bg-white mt-5 p-4 lg:mx-auto mx-5">
+                <p class=" text-slate-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti ipsa accusamus ratione
+                    neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis ex,
+                    odit neque vero totam aut quis rerum quae! Quos tempore eligendi odit non eveniet. Officia officiis
+                    ex, odit
+                </p>
+                <div class="relative created-time mt-7 text-sm font-medium align-top">
+                    <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
