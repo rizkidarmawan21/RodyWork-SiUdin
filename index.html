@@ -12,8 +12,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js"></script>
+    <script type="module" src="config/firebase.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+
     <title>SiUdin</title>
 </head>
 
@@ -32,11 +37,12 @@
     </header>
     <main>
         <div class="container lg:max-w-[50%] max-w-lg mx-auto mt-5 p-4 mb-10">
-            <form action="" class="lg:flex sm:block block">
+            <div class="lg:flex sm:block block">
+
                 <textarea type="text" placeholder="Tulis pesan anda" rows="1" class="
-                        px-3
-                        py-2
-                    border
+                px-3
+                py-2
+                border
                     shadow
                     rounded
                     w-full
@@ -49,16 +55,16 @@
                     focus:border-sky-500
                     "></textarea>
                 <!-- <button class="ml-3 mx-auto block bg-sky-500 px-5 py-2 justify-end rounded text-white font-semibold hover:bg-sky-600 active:bg-sky-700 ">Kirim</button>
-                 -->
-                <button
+                    -->
+                <button onclick="sendMessage()"
                     class="bg-[#70FF75] px-5 hidden lg:block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-white font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
                     <img src="assets/SendIcon.svg" width="20px" alt="">
                 </button>
-                <button
+                <button onclick="sendMessage()"
                     class="bg-[#70FF75] px-5 lg:hidden block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-slate-900 font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
                     Kirim
                 </button>
-            </form>
+            </div>
         </div>
 
         <div class="text-center">
@@ -74,7 +80,9 @@
                     ex, odit
                 </p>
                 <div class="relative created-time mt-10 text-lg font-medium align-top">
-                    <p class="absolute left-0 bottom-1"><span><i class="fa-regular fa-heart text-slate-700"></i> 10K</span><span class="ml-2"><i class="fa-solid fa-thumbs-down text-slate-700"></i> 1K</span></p>
+                    <p class="absolute left-0 bottom-1"><span><i class="fa-regular fa-heart text-slate-700"></i>
+                            10K</span><span class="ml-2"><i class="fa-solid fa-thumbs-down text-slate-700"></i>
+                            1K</span></p>
                 </div>
                 <div class="relative created-time mt-7 text-sm font-medium align-top">
                     <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
@@ -88,7 +96,9 @@
                     ex, odit
                 </p>
                 <div class="relative created-time mt-10 text-lg font-medium align-top">
-                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i> 10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i> 1K</span></p>
+                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i>
+                            10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i>
+                            1K</span></p>
                 </div>
                 <div class="relative created-time mt-7 text-sm font-medium align-top">
                     <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
@@ -102,7 +112,9 @@
                     ex, odit
                 </p>
                 <div class="relative created-time mt-10 text-lg font-medium align-top">
-                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i> 10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i> 1K</span></p>
+                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i>
+                            10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i>
+                            1K</span></p>
                 </div>
                 <div class="relative created-time mt-7 text-sm font-medium align-top">
                     <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
@@ -116,7 +128,9 @@
                     ex, odit
                 </p>
                 <div class="relative created-time mt-10 text-lg font-medium align-top">
-                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i> 10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i> 1K</span></p>
+                    <p class="absolute left-0 bottom-1"><span><i class="fa-solid fa-heart text-red-600"></i>
+                            10K</span><span class="ml-2"><i class="fa-regular fa-thumbs-down text-slate-700"></i>
+                            1K</span></p>
                 </div>
                 <div class="relative created-time mt-7 text-sm font-medium align-top">
                     <p class="absolute right-0 bottom-1">Friday, 20 April 2022</p>
@@ -128,5 +142,7 @@
 
     </main>
 </body>
+
+
 
 </html>
