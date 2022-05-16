@@ -25,13 +25,3 @@ tailwind.config = {
         }
     }
 }
-
-
-
-function sendMessage(){
-    alert('sendMessage');
-    database.ref('siudin').push({
-        message: 'siudin',
-    })
-}
-import {database} from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js'
