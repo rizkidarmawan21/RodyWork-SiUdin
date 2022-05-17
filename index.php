@@ -114,6 +114,20 @@
         });
     }
     
+    function dislikeMessage(id){
+        // alert('like mlebu')
+        $.ajax({
+        'url': 'dislike.php',
+        'type': 'POST',
+        'data':{id:id}
+,        success: function() {
+                var update = setTimeout (function () {
+                $('#tampil').load ('tampil.php', 'update=true');
+                }, 500);
+			}
+        });
+    }
+
     </script>
 </body>
 </html>
