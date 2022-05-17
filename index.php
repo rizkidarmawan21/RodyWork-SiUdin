@@ -85,19 +85,21 @@
     function sendMessage ()
     {
         var post = $('#pesan').val();
-
-        $.ajax({
-        'url': 'inp.php',
-        'type': 'POST',
-        'data': {pesan: post},
-        success: function() {
-                $('#pesan').val('');
-                var updater = setTimeout (function () {
-                $('#tampil').load ('tampil.php', 'update=true');
-                }, 500);
-			}
-        });
-
+        if(post == '') {
+            alert('Masukan Pesan')
+        } else {
+            $.ajax({
+            'url': 'inp.php',
+            'type': 'POST',
+            'data': {pesan: post},
+            success: function() {
+                    $('#pesan').val('');
+                    var updater = setTimeout (function () {
+                    $('#tampil').load ('tampil.php', 'update=true');
+                    }, 500);
+                }
+            });
+        }
     }
 
     function likeMessage(id){
