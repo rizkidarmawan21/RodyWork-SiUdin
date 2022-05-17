@@ -19,11 +19,23 @@ class Database {
 		return $hasil;
     }
 
+	public function addLike($id){
+		// echo "hai like";
+		$sql = "update pesan set btnlike = btnlike + 1 where id = $id";
+		$hasil=$this->conn->query($sql);
+		return $hasil;
+	}
+
+	
     public function out() {
-        $sql="select * from pesan order by id desc limit 5";
+		$sql="select * from pesan order by id desc";
 		$hasil=$this->conn->query($sql); 
 		return $hasil;
     }
 }
 
 ?>
+
+
+
+

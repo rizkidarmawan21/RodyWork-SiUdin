@@ -62,7 +62,7 @@
                     class="bg-[#70FF75] px-5 lg:hidden block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-slate-900 font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
                     Kirim
                 </button>
-            </div>
+            </div>  
         </div>
 
         <div class="text-center">
@@ -81,6 +81,7 @@
         $('#tampil').load ('tampil.php', 'update=true');
     });
 
+
     function sendMessage ()
     {
         var post = $('#pesan').val();
@@ -98,6 +99,21 @@
         });
 
     }
+
+    function likeMessage(id){
+        // alert('like mlebu')
+        $.ajax({
+        'url': 'like.php',
+        'type': 'POST',
+        'data':{id:id}
+,        success: function() {
+                var update = setTimeout (function () {
+                $('#tampil').load ('tampil.php', 'update=true');
+                }, 500);
+			}
+        });
+    }
+    
     </script>
 </body>
 </html>
