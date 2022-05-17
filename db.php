@@ -26,6 +26,13 @@ class Database {
 		return $hasil;
 	}
 
+	public function addDislike($id){
+		// echo "hai dislike";
+		$sql = "update pesan set btndislike = btndislike + 1 where id = $id";
+		$hasil=$this->conn->query($sql);
+		return $hasil;
+	}
+
 	
     public function out() {
 		$sql="select * from pesan order by id desc";

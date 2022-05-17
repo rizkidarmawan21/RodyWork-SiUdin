@@ -12,8 +12,8 @@
             <p class= ' text-slate-500'>".$row["isi"]."</p>
             <div class='relative created-time mt-10 text-lg font-medium align-top'>
                 <p class='absolute left-0 bottom-1'><span><button onclick='likeMessage(".$row["id"].")'><i class='fa-regular fa-heart text-slate-700'></i></button>
-                        ".$row["btnlike"]."</span><span class='ml-2'><i class='fa-solid fa-thumbs-down text-slate-700'></i>
-                        1K</span></p>
+                        ".$row["btnlike"]."</span><span class='ml-2'><button onclick='dislikeMessage(".$row["id"].")'><i class='fa-solid fa-thumbs-down text-slate-700'></i></button>
+                        ".$row["btndislike"]."</span></p>
             </div>
             <div class='relative created-time mt-7 text-sm font-medium align-top'>
                 <p class='absolute right-0 bottom-1'>".$row["waktu"]."</p></div>
