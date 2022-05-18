@@ -128,14 +128,6 @@
     var status = 'netral';
 
     function likeMessage(id){
-        // if (status == 'netral') {
-        //     status = 'like';
-        // } else if (status == 'like') {
-        //     status = 'netral';
-        // } else if (status == 'dislike') {
-        //     status = 'like'
-        // }
-        // alert('like mlebu')
         $.ajax({
         'url': 'like.php',
         'type': 'POST',
