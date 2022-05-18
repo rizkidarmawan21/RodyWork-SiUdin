@@ -84,11 +84,12 @@
     
     function _filterBadWord(str,txt,dt){
         if (str) {
-            var str = str.toLowerCase(); 
+            var lowstr = str.toLowerCase(); 
             txt = txt ? txt : "***"; 
             dt = dt ? dt : _badWord; 
             for (var i = 0; i < dt.length; i++) {
-                var kk = dt[i].toLowerCase(); var ii = str.search(kk); 
+                var kk = dt[i].toLowerCase(); 
+                var ii = lowstr.search(kk); 
                 if ( ii != -1) {
                     str = str._replaceAllString(kk,txt); 
                 } 
@@ -124,8 +125,9 @@
         }
     }
 
+    var status = 'netral';
+
     function likeMessage(id){
-        // alert('like mlebu')
         $.ajax({
         'url': 'like.php',
         'type': 'POST',
