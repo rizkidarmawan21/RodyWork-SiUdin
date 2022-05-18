@@ -4,4 +4,4 @@
     $id = $_POST['id'];
 
     $db = new Database();
-    $db->addLike($id);
+    $db->unLike($id);

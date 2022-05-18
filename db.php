@@ -21,14 +21,30 @@ class Database {
 
 	public function addLike($id){
 		// echo "hai like";
+		setcookie ("like-".$id, $id);
 		$sql = "update pesan set btnlike = btnlike + 1 where id = $id";
+		$hasil=$this->conn->query($sql);
+		return $hasil;
+	}
+	public function unLike($id){
+		// echo "hai like";
+		setcookie ("like-".$id, "");
+		$sql = "update pesan set btnlike = btnlike - 1 where id = $id";
 		$hasil=$this->conn->query($sql);
 		return $hasil;
 	}
 
 	public function addDislike($id){
 		// echo "hai dislike";
+		setcookie ("unLike-".$id, $id);
 		$sql = "update pesan set btndislike = btndislike + 1 where id = $id";
+		$hasil=$this->conn->query($sql);
+		return $hasil;
+	}
+	public function unDislike($id){
+		// echo "hai dislike";
+		setcookie ("unLike-".$id, "");
+		$sql = "update pesan set btndislike = btndislike - 1 where id = $id";
 		$hasil=$this->conn->query($sql);
 		return $hasil;
 	}
