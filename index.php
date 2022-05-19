@@ -75,7 +75,7 @@
 
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 </html>

@@ -29,9 +29,14 @@ const _badWord = ['Anjing','Babi','Kunyuk','Bajingan','Asu','Bangsat','Kampret',
     {
         var pesan = $('#pesan').val();
         var post = _filterBadWord(pesan,'***');
-        if(post == '') {
-            alert('Masukan Pesan')
-        } else {
+        if(pesan == '') {
+            Swal.fire({
+                title: '<strong>Perhatian !</strong>',
+                icon: 'warning',
+                html:
+                  'Pesan Tidak Boleh Kosong !',
+              })
+        }else {
             $.ajax({
             'url': 'inp.php',
             'type': 'POST',
