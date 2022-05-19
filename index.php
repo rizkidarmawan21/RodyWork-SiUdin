@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -22,6 +20,17 @@
 </head>
 
 <body class="bg-cover" style="background-image: url('assets/bg.jpg');">
+
+    <div class="header-2-2" style="font-family: 'Poppins', sans-serif">
+        <header x-data="{ open: false }">
+            <div class="mx-auto flex py-12 lg:px-24 md:px-16 sm:px-8 px-8 items-center justify-between lg:justify-start">
+                <a href="index.html">
+                    <img src="assets/logo.png" width="100" alt="" />
+                </a>
+            </div>
+        </header>
+    </div>
+
     <header class="">
         <div class="logo">
             <img class="mx-auto mt-10 w-32 md:w-40 lg:w-60" src="assets/logo.png" alt="">
@@ -30,8 +39,7 @@
             <h3 class="text-center italic text-[20px] font-robotoFlex text-[#1C1B1F] font-light">Write your hopes and
                 suggestions</h3>
             <p class="text-center italic text-sm font-robotoFlex text-[#1C1B1F] font-extrabold">for our beloved
-                campus<span class="ml-1 bg-[#003CD7]/50 w-[100px] h-5 relative top-1 inline-block rotate-3"><span
-                        class="absolute right-2 -rotate-3 text-white">as an Anonim</span></span></p>
+                campus<span class="ml-1 bg-[#003CD7]/50 w-[100px] h-5 relative top-1 inline-block rotate-3"><span class="absolute right-2 -rotate-3 text-white">as an Anonim</span></span></p>
         </div>
     </header>
     <main>
@@ -54,22 +62,20 @@
                 "></textarea>
                 <!-- <button class="ml-3 mx-auto block bg-sky-500 px-5 py-2 justify-end rounded text-white font-semibold hover:bg-sky-600 active:bg-sky-700 ">Kirim</button>
                     -->
-                <button onclick="sendMessage()"
-                    class="bg-[#70FF75] px-5 hidden lg:block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-white font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
+                <button onclick="sendMessage()" class="bg-[#70FF75] px-5 hidden lg:block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-white font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
                     <img src="assets/SendIcon.svg" width="20px" alt="">
                 </button>
-                <button onclick="sendMessage()"
-                    class="bg-[#70FF75] px-5 lg:hidden block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-slate-900 font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
+                <button onclick="sendMessage()" class="bg-[#70FF75] px-5 lg:hidden block py-2 rounded-lg lg:ml-3 lg:mt-0 mt-2 text-slate-900 font-semibold font-inter mx-auto hover:bg-green-300 active:bg-green-400 focus:ring focus:ring-green-200 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
                     Kirim
                 </button>
-            </div>  
+            </div>
         </div>
 
         <div class="text-center">
             <h1 class="text-robotoFlex font-bold text-2xl italic text-slate-800">Curahan Maidomu</h1>
         </div>
 
-        <div id="tampil" class=" rounded-md mt-5 mb-10 max-w-3xl p-5 h-[40em] mx-auto overflow-y-scroll overflow-visible">      
+        <div id="tampil" class=" rounded-md mt-5 mb-10 max-w-3xl p-5 h-[40em] mx-auto overflow-y-scroll overflow-visible">
         </div>
 
 
@@ -78,4 +84,5 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>
