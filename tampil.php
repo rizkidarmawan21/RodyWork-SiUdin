@@ -12,7 +12,7 @@ while ($row = $hasil->fetch_assoc()) {
 ?>
 
     <div class='rounded-lg shadow-lg max-w-3xl mb-10 bg-white mt-5 p-4 lg:mx-auto mx-5'>
-        <p class=' text-slate-500'><?= $row["isi"] ?></p>
+        <p class=' text-slate-500 text-lg'><?= $row["isi"] ?></p>
         <div class='relative created-time mt-10 text-lg font-medium align-top'>
             <p class='absolute left-0 bottom-1'>
                 <?php if (isset($_COOKIE["like-" . $row['id']])) { ?>
