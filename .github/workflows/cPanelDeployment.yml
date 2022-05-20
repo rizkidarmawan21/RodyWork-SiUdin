@@ -11,10 +11,8 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
-    - name: Remove db development
-      run: unlink db.php
     - name: Rename db
-      run: php -r "file_exists('db.php') || copy('db-production', 'db.php');"
+      run: php -r "file_exists('db.php') || copy('db-production.php', 'db.php');"
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
