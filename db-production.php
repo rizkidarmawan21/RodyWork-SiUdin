@@ -4,6 +4,7 @@ define('DB_USER','dnccs_siudin');
 define('DB_PASS' ,'FNCnKNVKO13q');
 define('DB_NAME', 'dnccs_siudin');
 
+
 class Database {
 	public $conn;
 	function __construct()
