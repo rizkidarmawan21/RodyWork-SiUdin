@@ -12,9 +12,9 @@ jobs:
       with:
         fetch-depth: 2
     - name: Rename db dev
-      run: php -r "file_exists('db.php') || copy('db.php', 'db-dev.php');"
+      run: rm db.php
     - name: Rename db
-      run: php -r "file_exists('db.php') || copy('db-production.php', 'db.php');"
+      run: php -r "copy('db-production.php', 'db.php');"
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
