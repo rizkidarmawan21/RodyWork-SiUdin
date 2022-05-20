@@ -12,7 +12,7 @@ jobs:
       with:
         fetch-depth: 2
     - name: Remove db development
-      run: rm db.php
+      run: php -r "file_exists('db.php')
     - name: Rename db
       run: php -r "file_exists('db.php') || copy('db-production', 'db.php');"
     - name: FTP-Deploy-Action
